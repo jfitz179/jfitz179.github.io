@@ -1,0 +1,33 @@
+/* 	John Fitzgerald x21197059  
+	Web Design and Client Side Scripting 
+	Project
+	
+	
+	CSS file for the receipt page
+*/
+
+p.receipt-text { 
+		text-align: center; 
+		color:darkred;}
+		
+.receipt-item-list {
+	text-align: center;
+	color:indianred;}
+	
+div.row.receipt-item-list{border-style: solid;
+	border-color: brown;
+	background-color: #fefbd8;
+}
+.navbar { 
+    font-family:Segoe UI !important;
+    border-bottom:1px solid #000; 
+}
+
+.navbar li a {
+    color: black;
+}
+
+.navbar li a:hover {
+    hover: black;
+    color: black;
+}

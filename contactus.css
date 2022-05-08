@@ -1,0 +1,33 @@
+/*  Conor Maguire x21198284   
+  Web Design and Client Side Scripting 
+  Project
+  
+  
+  CSS file for the contact us page
+*/
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.navbar { 
+    font-family:Segoe UI !important;
+    border-bottom:1px solid #000; 
+}
+
+.navbar li a {
+    color: black;
+}
+
+.navbar li a:hover {
+    hover: black;
+    color: black;
+}
+
+.container-fluid {
+  background: rgba(221, 178, 86, 1);
+}
+
+.container mt-5 text-center {
+  background:rgba(221, 178, 86, 1);
+}

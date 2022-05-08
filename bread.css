@@ -1,0 +1,55 @@
+/* 	Conor Maguire x21198284   
+	Web Design and Client Side Scripting 
+	Project
+	
+	
+	CSS file for the ourbread page
+*/
+
+
+
+
+.col-md-5 img {
+	height: 350px;
+	width: 350px;
+}
+.row-featurette {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background-color: rgba(221, 178, 86, 1);
+}
+.row1 {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background-color: rgba(219, 105, 48, 1);
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+iframe {
+	width: 100%;
+}
+
+.navbar { 
+    font-family:Segoe UI !important; 
+    border-bottom:1px solid #000; 
+
+}
+.navbar li a {
+    color: black;
+}
+
+.navbar li a:hover {
+    hover: black;
+    color: black;
+}
+
+.container-lg {
+	background:rgba(221, 178, 86, 1);
+}
+
+

@@ -1,0 +1,39 @@
+/*  Ruben Lopez x20146876   
+    Web Design and Client Side Scripting 
+    Project
+    
+    
+    CSS file for the receipt page
+*/
+html{background-color: rgb(221, 178, 86)}
+
+
+
+.card {
+    margin-left: 10%;
+    margin-bottom: 10%;
+    background-color: rgb(221, 178, 86)
+}
+
+
+div .container .my-5{
+
+    background-color: rgb(221, 178, 86)
+}
+
+.navbar { 
+    font-family:Segoe UI !important; 
+    border-bottom:1px solid #000; 
+
+}
+.navbar li a {
+    color: black;
+}
+
+.navbar li a:hover {
+    hover: black;
+    color: black;
+}
+
+
+

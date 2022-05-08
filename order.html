@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+    <title>Rubens Bakery</title>
+    <link rel="stylesheet" href="bread.css">
+    <script src="https://kit.fontawesome.com/cf92a0f31b.js" crossorigin="anonymous"></script>
+	
+	<script>
+		
+		//Called when any of the loaves numbers changed
+		function numLoavesChanged()
+		{
+			//alert("Number of Loaves Changed!");
+			let numBrownLoaves = document.forms["orderForm"]["numBrownLoaves"].value;
+			let numWhiteLoaves = document.forms["orderForm"]["numWhiteLoaves"].value;
+			let numSourdoughLoaves = document.forms["orderForm"]["numSourdoughLoaves"].value;
+			let numGlutenFreeLoaves = document.forms["orderForm"]["numGlutenFreeLoaves"].value;
+			if(numBrownLoaves>0 || numWhiteLoaves>0 || numSourdoughLoaves>0 || numGlutenFreeLoaves>0){
+				document.getElementById("submit").disabled = false;
+			} else {
+				document.getElementById("submit").disabled = 'disabled';
+			}
+			
+		}
+		
+		function placeOrder(){
+			let numBrownLoaves = document.forms["orderForm"]["numBrownLoaves"].value;
+			let numWhiteLoaves = document.forms["orderForm"]["numWhiteLoaves"].value;
+			let numSourdoughLoaves = document.forms["orderForm"]["numSourdoughLoaves"].value;
+			let numGlutenFreeLoaves = document.forms["orderForm"]["numGlutenFreeLoaves"].value;
+			//alert("Order is:\n" + numBrownLoaves + " brown loaves\n" + numWhiteLoaves + " white loaves\n" + numSourdoughLoaves + " sourdough loaves\n" + numGlutenFreeLoaves + " gluten loaves\n");
+		}
+		
+	</script>
+</head>
+<body>       
+    <nav class="navbar navbar light justify-content-center">
+      <ul class="nav nav-fill">
+        <img src="test.png" alt="" width="130" height="100">
+        <li class="nav-item mt-4">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item mt-4">
+          <a class="nav-link" href="ourbread.html">Our bread</a>
+        </li>
+        <li class="nav-item mt-4">
+          <a class="nav-link" href="order.html">Order</a>
+        </li>
+        <li class="nav-item mt-4">
+          <a class="nav-link" href="contactUs.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>    
+
+
+
+
+    <figure class="text-center">
+        <blockquote class="blockquote">
+          <div class="container-lg">
+			<div class="text-center row mt-5">
+				<h2>Order Some of Our Delicious Bread</h2>
+				<p class="lead">Want to try some of our products at home? Make your selections below and proceed to the checkout...</p>
+			</div>
+			<div class="row justify-content-center my-5">
+				<div class="col-lg-6">
+					<form id="orderForm" action="./receipt.html" method="GET">
+						<div class="row mb-4 ">
+							<label for="numBrownLoaves" class="form-label col-sm-6" >Number of Brown Loaves:</label>
+							<div class="col-sm-2">
+								<input type="number" class="form-control" id="numBrownLoaves" name="numBrownLoaves" value="0"
+								min="0" max="25" onkeypress="return /[0-9]/i.test(event.key)" oninput="numLoavesChanged()" >
+							</div>
+						</div>
+						<div class="row mb-4 mt-5">
+							<label for="numWhiteLoaves" class="form-label col-sm-6" >Number of White Loaves:</label>
+							<div class="col-sm-2">
+								<input type="number" class="form-control" id="numWhiteLoaves" name="numWhiteLoaves" value="0"
+								min="0" max="25" onkeypress="return /[0-9]/i.test(event.key)" oninput="numLoavesChanged()">
+							</div>
+						</div>
+						<div class="row mb-4 mt-5">
+							<label for="numSourdoughLoaves" class="form-label col-sm-6" >Number of Sourdough Loaves:</label>
+							<div class="col-sm-2">	
+								<input type="number" class="form-control" id="numSourdoughLoaves" name="numSourdoughLoaves" value="0"
+								min="0" max="25" onkeypress="return /[0-9]/i.test(event.key)" oninput="numLoavesChanged()">
+							</div>
+						</div>
+						<div class="row mb-4 mt-5">
+							<label for="numGlutenFreeLoaves" class="form-label col-sm-6" >Number of Gluten Free Loaves:</label>
+							<div class="col-sm-2">
+								<input type="number" class="form-control" id="numGlutenFreeLoaves" name="numGlutenFreeLoaves" value="0"
+								min="0" max="25" onkeypress="return /[0-9]/i.test(event.key)" oninput="numLoavesChanged()">
+							</div>
+						</div>
+						<div class="mt-5 mb-4 text-center">
+							<button type="submit" class="btn btn-secondary" id="submit" disabled="disabled" onclick="placeOrder()">Place Order</button>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		  
+		  </div>
+        </blockquote>
+    </figure>
+
+
+
+
+
+   <div style="background-color: rgb(221, 178, 86)">
+      <div class="container" style="background-color: rgb(221, 178, 86)">
+
+        <footer class="text-center text-lg-start" style="background-color: #db6930;">
+          <div class="container d-flex justify-content-center py-5">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <a href="https://www.facebook.com/" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+              
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </button>
+          </div>
+      
+          
+          <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Address: Georges Arcade, Dublin, Ireland  Tel: + 042 9356 8543  Email: john@rubensbakery.ie
+            
+          </div>
+          
+        </footer>
+        
+      </div>
+      <!-- End of .container -->
+    </div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+</body>
+</html>
